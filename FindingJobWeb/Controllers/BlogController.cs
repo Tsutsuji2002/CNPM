@@ -189,5 +189,54 @@ namespace FindingJobWeb.Controllers
         {
             return PartialView();
         }
+        public ActionResult Comment(int id)
+        {
+            // Get the blog post
+            var blog = data.Blogs.FirstOrDefault(n => n.ID == id);
+
+            // If the blog post does not exist, return a 404 error
+            if (blog == null)
+            {
+                return HttpNotFound();
+            }
+
+            // Create a new comment
+            var comment = new Blog_comment();
+            comment.post_ID = id;
+
+            User user = (User)Session["Account"];
+            int userID = user.ID;
+            comment.user_ID = userID;
+
+            comment.user_ID = userID;
+            comment.Content = Request.Form["Content"];  
+            comment.created_at = DateTime.Now;
+
+            // Save the comment
+            data.Blog_comments.InsertOnSubmit(comment);
+            data.SubmitChanges();
+
+            // Redirect to the blog post
+            return RedirectToAction("BlogDetails", "Blog", new { id = id });
+        }
+        public ActionResult ShowComments(int id)
+        {
+            var blog = data.Blogs.FirstOrDefault(n => n.ID == id);
+            ViewBag.blogCount = data.Blogs.Count(n => n.ID == id);
+
+            // If the blog post does not exist, return a 404 error
+            if (blog == null)
+            {
+                return HttpNotFound();
+            }
+
+            // Get the comments for the blog post
+            var comments = data.Blog_comments.Where(n => n.post_ID == id).ToList();
+
+            // Return the partial view with the comments
+            return PartialView(comments);
+        }
+
+
     }
 }
