@@ -1,0 +1,11 @@
+﻿@model IEnumerable<FindingJobWeb.Models.PostsbyCategory>
+
+<div class="single-widget category-widget">
+    <h4 class="title">Danh mục bài viết</h4>
+    <ul>
+        @foreach (var cate in Model)
+        {
+            <li><a href="@Url.Action("PostsbyCategory","Blog", new { id = cate.ID, CategoryName = cate.name })" class="justify-content-between align-items-center d-flex"><h6>@cate.name</h6> <span>@cate.NoOfPosts</span></a></li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Job Listing</title>
+    <meta name="description" content="">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="shortcut icon" href="img/favicon.png"> -->
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet'>
+
+    <!-- Syntax Highlighter -->
+    <link rel="stylesheet" type="text/css" href="~/Areas/Admin/Content/syntax-highlighter/styles/shCore.css" media="all">
+    <link rel="stylesheet" type="text/css" href="~/Areas/Admin/Content/syntax-highlighter/styles/shThemeDefault.css" media="all">
+
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="~/Areas/Admin/Content/css/font-awesome.min.css">
+    <!-- Normalize/Reset CSS-->
+    <link rel="stylesheet" href="~/Areas/Admin/Content/css/normalize.min.css">
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="~/Areas/Admin/Content/css/main.css">
+
+</head>
+
+<body id="welcome">
+
+    <aside class="left-sidebar">
+        <div class="logo">
+            <a href="#welcome">
+                <img src="~/Areas/Admin/Content/img/logo.png" alt="">
+            </a>
+        </div>
+        <nav class="left-nav">
+            <ul id="nav">
+                <li class="current"><a href="#joblist">Quản lý việc làm</a></li>
+                <li><a href="#other">Khác</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div id="main-wrapper">
+        <div class="main-content">
+            @RenderBody()
+            
+
+            <section id="other">
+                <div class="content-header">
+                    <h1>Job Listing Landing Page</h1>
+                </div>
+                <h2 class="title">Installing Template.</h2>
+
+                <div class="section-content">
+                    <ol>
+                        <li>After unzip the download pack, you'll found a Template Folder with all the files.</li>
+                        <li>You can view this Template in any browser, you can display or edit the Template without an internet connection.(May not wotrk fonts and google map).</li>
+                        <li>The only section that will not work is the Contact Section which contains PHP code and requires a server environment for send messages.</li>
+                        <li>Now go to your cpanel or open your FTP Client (like <a target="_blank" href="https://filezilla-project.org/download.php">Filezilla</a>) and upload the content of the Template on your server root.</li>
+                        <li>Once the files are done uploading go to www.yourdomainname.com/index.html</li>
+                    </ol>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+
+    <!-- Essential JavaScript Libraries
+    ==============================================-->
+    <script type="text/javascript" src="~/Areas/Admin/Content/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="~/Areas/Admin/Content/js/jquery.nav.js"></script>
+    <script type="text/javascript" src="~/Areas/Admin/Content/syntax-highlighter/scripts/shCore.js"></script>
+    <script type="text/javascript" src="~/Areas/Admin/Content/syntax-highlighter/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="~/Areas/Admin/Content/syntax-highlighter/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="~/Areas/Admin/Content/syntax-highlighter/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="~/Areas/Admin/Content/syntax-highlighter/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript">
+        SyntaxHighlighter.all()
+    </script>
+    <script type="text/javascript" src="~/Areas/Admin/Content/js/custom.js"></script>
+
+</body>
+</html>

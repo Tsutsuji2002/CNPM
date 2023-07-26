@@ -1,0 +1,22 @@
+﻿@model IEnumerable<FindingJobWeb.Models.NewJob>
+
+<div class="single-slidebar">
+    <h4>Các công việc mới:</h4>
+    <div class="active-relatedjob-carusel">
+        @foreach (var nj in Model)
+        { 
+            <div class="single-rated">
+                <img class="img-fluid" src="~/Resource/img/company/@nj.Image" alt="">
+                <a href="@Url.Action("JobDetails", "Job", new { id = nj.JobID })"><h4>@nj.Name</h4></a>
+                <h6>@nj.CompanyName</h6>
+                <p>
+                    @nj.Description
+                </p>
+                <h5>Loại công việc: @nj.TypeName</h5>
+                <p class="address"><span class="lnr lnr-map"></span> @nj.Address</p>
+                <p class="address"><span class="lnr lnr-database"></span> @nj.Salary</p>
+                <a href="#" class="btns text-uppercase">Ứng tuyển</a>
+            </div>
+        }
+    </div>
+</div>

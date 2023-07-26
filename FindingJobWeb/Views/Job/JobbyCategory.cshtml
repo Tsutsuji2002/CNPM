@@ -1,0 +1,147 @@
+﻿
+@using FindingJobWeb.Models
+@using PagedList
+@using PagedList.Mvc
+
+@model IPagedList<FindingJobWeb.Models.FullJob>
+@{
+    ViewBag.Title = "JobbyCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- start banner Area -->
+@Html.Action("BannerArea", "Job", new { title = "Việc làm thuộc " + ViewBag.Category })
+<!-- End banner Area -->
+<!-- Start post Area -->
+<section class="post-area section-gap">
+    <div class="container">
+        <div class="row justify-content-center d-flex">
+            <div class="col-lg-8 post-list">
+                @foreach (var item in Model)
+                {
+                    <div class="single-post d-flex flex-row">
+                        <div class="thumb">
+                            <img src="~/Resource/img/company/@item.Image" alt="" style="max-width:150px; max-height: 200px">
+                            <ul class="tags">
+                                <li>
+                                    <a href="#">@item.Specialization</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="details">
+                            <div class="title d-flex flex-row justify-content-between">
+                                <div class="titles">
+                                    <a href="@Url.Action("JobDetails", "Job", new { id = item.JobID })"><h4>@item.Name</h4></a>
+                                    <h6>@item.CompanyName</h6>
+                                </div>
+                                <ul class="btns">
+                                    <li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+                                    <li><a href="#">Ứng tuyển</a></li>
+                                </ul>
+                            </div>
+                            <p style="max-width: 500px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                @item.Description
+                            </p>
+                            <h5>Loại công việc: @item.TypeName</h5>
+                            <p class="address"><span class="lnr lnr-map"></span> @item.Address</p>
+                            <p class="address"><span class="lnr lnr-database"></span> @item.Salary</p>
+                        </div>
+                    </div>
+                }
+                <div class="pagination-container">
+                    @Html.PagedListPager(Model, page => Url.Action("JobbyCategory", new { page }))
+                </div>
+                <style>
+                    .pagination-container ul {
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    .pagination-container li {
+                        margin: 0 5px;
+                        padding: 5px;
+                        border: gray 1px solid;
+                    }
+
+                        .pagination-container li.active {
+                            background-color: gray;
+                            color: white;
+                        }
+                </style>
+            </div>
+
+            <div class="col-lg-4 sidebar">
+                @Html.Action("SearchbyLocation", "Job")
+
+                @Html.Action("NewJob", "Job")
+
+                @Html.Action("SearchbyCategory", "Job")
+
+                <div class="single-slidebar">
+                    <h4>Carrer Advice Blog</h4>
+                    <div class="blog-list">
+                        <div class="single-blog " style="background:#000 url(img/blog1.jpg);">
+                            <a href="single.html">
+                                <h4>
+                                    Home Audio Recording <br>
+                                    For Everyone
+                                </h4>
+                            </a>
+                            <div class="meta justify-content-between d-flex">
+                                <p>
+                                    02 Hours ago
+                                </p>
+                                <p>
+                                    <span class="lnr lnr-heart"></span>
+                                    06
+                                    <span class="lnr lnr-bubble"></span>
+                                    02
+                                </p>
+                            </div>
+                        </div>
+                        <div class="single-blog " style="background:#000 url(img/blog2.jpg);">
+                            <a href="single.html">
+                                <h4>
+                                    Home Audio Recording <br>
+                                    For Everyone
+                                </h4>
+                            </a>
+                            <div class="meta justify-content-between d-flex">
+                                <p>
+                                    02 Hours ago
+                                </p>
+                                <p>
+                                    <span class="lnr lnr-heart"></span>
+                                    06
+                                    <span class="lnr lnr-bubble"></span>
+                                    02
+                                </p>
+                            </div>
+                        </div>
+                        <div class="single-blog " style="background:#000 url(img/blog1.jpg);">
+                            <a href="single.html">
+                                <h4>
+                                    Home Audio Recording <br>
+                                    For Everyone
+                                </h4>
+                            </a>
+                            <div class="meta justify-content-between d-flex">
+                                <p>
+                                    02 Hours ago
+                                </p>
+                                <p>
+                                    <span class="lnr lnr-heart"></span>
+                                    06
+                                    <span class="lnr lnr-bubble"></span>
+                                    02
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End post Area -->

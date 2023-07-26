@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.625, 16" name="FJWeb">
+  <DataContextMoniker Name="/FJWebDataContext" />
+  <nestedChildShapes>
+    <classShape Id="81be85e0-e1db-4eff-950b-77884e4f97d4" absoluteBounds="0.75, 0.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/FJWebDataContext/Blog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62c0ff3a-68b0-463e-abd8-5271238a43ff" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="685c74d4-b3f2-4a94-972b-d9de59db8ed8" absoluteBounds="3.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/FJWebDataContext/TypeofJob" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc584036-f602-4a23-ba9f-6a462157f642" absoluteBounds="3.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a59e046-5993-42bf-a993-b4b89f3a2a77" absoluteBounds="3.75, 2.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/FJWebDataContext/Blog_category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da47858c-a9af-439c-8a48-d773ba108794" absoluteBounds="3.765, 3.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b6792c1e-8748-41c6-9467-aef2601e7c8f" absoluteBounds="0.75, 5.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/FJWebDataContext/Blog_category_mapping" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da7f1e40-21d2-475c-af56-f037dd0adbc5" absoluteBounds="0.765, 6.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c0d91e78-bcb4-4abc-a0a6-5b1c983a27f8" absoluteBounds="3.75, 5.75, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/FJWebDataContext/Blog_comment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c264765e-bb12-4e42-903a-566b4fe9c754" absoluteBounds="3.765, 6.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3a5e5a16-382d-410d-b588-829c355ee1ba" absoluteBounds="6.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/FJWebDataContext/Blog_like" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf05c8ec-e545-4951-8458-1ad689be9666" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5da647fc-c935-48ed-9e2e-cab800731acb" absoluteBounds="6.75, 7.75, 2, 1.7708968098958335">
+      <DataClassMoniker Name="/FJWebDataContext/Contact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e90e1fbe-c754-4309-adb2-adb3f56593e6" absoluteBounds="6.765, 8.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4603bf09-ed5d-4fc0-b9f2-adfc4251da0e" absoluteBounds="0.75, 8.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/FJWebDataContext/Feature_area" />
+      <nestedChildShapes>
+        <elementListCompartment Id="289124ec-6445-46b7-a47f-49768f93b9a5" absoluteBounds="0.765, 9.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9b798608-c574-4774-855b-b54b40e4c642" absoluteBounds="9.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/FJWebDataContext/Industry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7f61467-79e5-46f9-9e66-5b190f9c0b8b" absoluteBounds="9.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eaddf97b-24c9-467b-8523-1f4dd7bb6cb7" absoluteBounds="9.75, 2.75, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/FJWebDataContext/Job" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f5e48bf4-d1b0-4e4a-afcc-a52497610936" absoluteBounds="9.765, 3.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a4864d0-74fe-40f0-9d5f-f245fff6c2f7" absoluteBounds="9.75, 7.75, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/FJWebDataContext/Location" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2e835055-0920-401a-a663-47c5587f533a" absoluteBounds="9.765, 8.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2e1ec20f-fbc9-406e-9aec-e4b003757b96" absoluteBounds="4, 8.5, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/FJWebDataContext/Navigation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23885995-89b5-4922-ac31-f3fafd3a0ca5" absoluteBounds="4.0150000000000006, 8.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 1.34699625651042); (6.5 : 1.34699625651042); (6.5 : 2.5); (10.75 : 2.5); (10.75 : 2.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FJWebDataContext/TypeofJob/TypeofJob_Job" />
+      <nodes>
+        <classShapeMoniker Id="685c74d4-b3f2-4a94-972b-d9de59db8ed8" />
+        <classShapeMoniker Id="eaddf97b-24c9-467b-8523-1f4dd7bb6cb7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ff9255d6-c812-4f53-b9e8-0370d5ef0387" absoluteBounds="3.375, 10.75, 2, 5.0400211588541666">
+      <DataClassMoniker Name="/FJWebDataContext/FullJob" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7b4c1a97-1a6e-4d5e-8d8d-6e056f6e0f7c" absoluteBounds="3.39, 11.21, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d818b290-36ad-48ac-86f1-860e16846f96" absoluteBounds="6.375, 10.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/FJWebDataContext/PostsbyCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2973cd40-ed9f-40bb-9b89-4c5ed8f7a1fb" absoluteBounds="6.39, 11.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a1a33474-4d2b-4a44-bd20-1a65932e2be5" absoluteBounds="9.375, 10.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/FJWebDataContext/JobsbyCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd0edcc3-2fc7-446c-9856-57876ce99a0c" absoluteBounds="9.39, 11.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e8792aa4-0c6d-4536-a2bb-242e8d197086" absoluteBounds="12.375, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/FJWebDataContext/JobsbyLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15553953-5e43-4a54-b9a2-3071f3993188" absoluteBounds="12.39, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62858671-c839-4e91-88c2-cf994de5c94c" absoluteBounds="12.375, 3.75, 2, 4.6554182942708318">
+      <DataClassMoniker Name="/FJWebDataContext/NewJob" />
+      <nestedChildShapes>
+        <elementListCompartment Id="740aaabe-b414-4f99-962c-ec4f9c0ad213" absoluteBounds="12.39, 4.21, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ac6e634e-23d0-4d5a-b87a-0f78d7ad33d0" absoluteBounds="0.75, 3.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/FJWebDataContext/ADMIN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a29f5b41-ba2d-41ce-aad2-e33fb86ff5db" absoluteBounds="0.76500000000000012, 3.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bad0d8ac-7897-43c3-a7ad-939ad9d609e5" absoluteBounds="6.625, 4.25, 2, 2.5401025390625">
+      <DataClassMoniker Name="/FJWebDataContext/Company" />
+      <nestedChildShapes>
+        <elementListCompartment Id="edf55c74-b327-4d11-9895-a7b4c98999ff" absoluteBounds="6.64, 4.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.625 : 5.52005126953125); (9.75 : 5.52005126953125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FJWebDataContext/Company/Company_Job" />
+      <nodes>
+        <classShapeMoniker Id="bad0d8ac-7897-43c3-a7ad-939ad9d609e5" />
+        <classShapeMoniker Id="eaddf97b-24c9-467b-8523-1f4dd7bb6cb7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cac283cf-01ac-4bb9-9a59-6c44966a0dfa" absoluteBounds="0.5, 10.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/FJWebDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1cdf062f-4f26-453b-8cca-9f77eefa1029" absoluteBounds="0.51500000000000012, 11.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

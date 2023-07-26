@@ -1,0 +1,17 @@
+﻿@using FindingJobWeb.Models
+
+@{
+    User user = (User)Session["Account"];
+}
+
+@if (Session["Account"] == null) //Giao diện Login
+{
+    <li><a class="ticker-btn" href="@Url.Action("Signin","User")">Đăng ký</a></li>
+    <li><a class="ticker-btn" href="@Url.Action("Login","User")">Đăng nhập</a></li>
+}
+else //Giao diện Logout
+{
+    <li style="color: white;">Xin chào: @user.Name </li>
+    <li style="color: white;"><a href="@Url.Action("Create","Job")">Thêm công việc mới</a></li>
+    <li><a class="ticker-btn" href="@Url.Action("Logout","User")">Đăng xuất</a></li>
+}

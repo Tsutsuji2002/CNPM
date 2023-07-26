@@ -1,0 +1,156 @@
+﻿@model FindingJobWeb.Models.FullJob
+
+@{
+    ViewBag.Title = "JobDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- start banner Area -->
+    @Html.Action("BannerArea", "Job", new { title = "Chi tiết việc làm" })
+<!-- End banner Area -->
+<!-- Start post Area -->
+<section class="post-area section-gap">
+    <div class="container">
+        <div class="row justify-content-center d-flex">
+            <div class="col-lg-8 post-list">
+                <div class="single-post d-flex flex-row">
+                    <div class="thumb">
+                        <img src="~/Resource/img/company/@Model.Image" alt="" style="max-width:300px; max-height: 200px">
+                        <ul class="tags" style="margin-right:50px">
+                            <li>
+                                <a href="#">@Model.Specialization</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="details">
+                        <div class="title d-flex flex-row justify-content-between">
+                            <div class="titles">
+                                <a href="#"><h4>@Model.Name</h4></a>
+                                <h6>@Model.CompanyName</h6>
+                            </div>
+                            <ul class="btns">
+                                <li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+                                <li><a href="#">Ứng tuyển</a></li>
+                            </ul>
+                        </div>
+                        <p>
+                            Thời gian còn lại: @((Model.LastDatetoApply - DateTime.Now).Value.Days) ngày
+                        </p>
+                        <h5>Loại công việc: @Model.TypeName</h5>
+                        <p class="address"><span class="lnr lnr-map"></span> @Model.Address</p>
+                        <p class="address"><span class="lnr lnr-database"></span> @Model.Salary</p>
+                    </div>
+                </div>
+                <div class="single-post job-details">
+                    <h4 class="single-title">Mô tả công việc</h4>
+                    <p>
+                        <pre>@Model.Description</pre>
+                    </p>
+                    <style>
+                        pre {
+                            font-family: "Poppins", sans-serif;
+                            font-size: 14px;
+                            white-space: pre-wrap;
+                        }
+                    </style>
+                </div>
+                <div class="single-post job-experience">
+                    <h4 class="single-title">Yêu cầu công việc</h4>
+                    <ul>
+                        <li>
+                            <img src="~/Resource/img/pages/list.jpg" alt="">
+                            <pre><span>@Model.Qualification</span></pre>
+                        </li>
+                    </ul>
+                    <style>
+                        pre {
+                            font-family: "Poppins", sans-serif;
+                            font-size: 14px;
+                            white-space: pre-wrap;
+                        }
+                    </style>
+                </div>
+                <div class="single-post job-experience">
+                    <h4 class="single-title">Website</h4>
+                    <ul>
+                        <li>
+                            <span>@Model.Website</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 sidebar">
+                @Html.Action("SearchbyLocation", "Job")
+
+                @Html.Action("NewJob", "Job")
+
+                @Html.Action("SearchbyCategory", "Job")
+
+                <div class="single-slidebar">
+                    <h4>Carrer Advice Blog</h4>
+                    <div class="blog-list">
+                        <div class="single-blog " style="background:#000 url(img/blog1.jpg);">
+                            <a href="single.html">
+                                <h4>
+                                    Home Audio Recording <br>
+                                    For Everyone
+                                </h4>
+                            </a>
+                            <div class="meta justify-content-between d-flex">
+                                <p>
+                                    02 Hours ago
+                                </p>
+                                <p>
+                                    <span class="lnr lnr-heart"></span>
+                                    06
+                                    <span class="lnr lnr-bubble"></span>
+                                    02
+                                </p>
+                            </div>
+                        </div>
+                        <div class="single-blog " style="background:#000 url(img/blog2.jpg);">
+                            <a href="single.html">
+                                <h4>
+                                    Home Audio Recording <br>
+                                    For Everyone
+                                </h4>
+                            </a>
+                            <div class="meta justify-content-between d-flex">
+                                <p>
+                                    02 Hours ago
+                                </p>
+                                <p>
+                                    <span class="lnr lnr-heart"></span>
+                                    06
+                                    <span class="lnr lnr-bubble"></span>
+                                    02
+                                </p>
+                            </div>
+                        </div>
+                        <div class="single-blog " style="background:#000 url(img/blog1.jpg);">
+                            <a href="single.html">
+                                <h4>
+                                    Home Audio Recording <br>
+                                    For Everyone
+                                </h4>
+                            </a>
+                            <div class="meta justify-content-between d-flex">
+                                <p>
+                                    02 Hours ago
+                                </p>
+                                <p>
+                                    <span class="lnr lnr-heart"></span>
+                                    06
+                                    <span class="lnr lnr-bubble"></span>
+                                    02
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End post Area -->

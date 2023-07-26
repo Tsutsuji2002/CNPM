@@ -1,0 +1,143 @@
+﻿@using FindingJobWeb.Models
+@using PagedList
+@using PagedList.Mvc
+
+@model PagedList.IPagedList<FindingJobWeb.Models.Job>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<section id="joblist">
+    <div class="content-header">
+        <p>
+            <h1>Quản lý việc làm</h1>
+        </p>
+    </div>
+    <div class="joblist">
+        <h2 class="twenty">Danh sách việc làm</h2>
+        <h3>@Html.ActionLink("Tạo mới", "Create")</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    Tên công việc
+                </th>
+                <th>
+                    Mô tả công việc
+                </th>
+                <th>
+                    Yêu cầu công việc
+                </th>
+                <th>
+                    Kinh nghiệm
+                </th>
+                <th>
+                    Kỹ năng
+                </th>
+                <th>
+                    Hạn chót ứng tuyển
+                </th>
+                <th>
+                    Lương
+                </th>
+                <th>
+                    Loại công việc
+                </th>
+                <th>
+                    Công ty trực thuộc
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Địa chỉ
+                </th>
+                <th>
+                    Mã tỉnh
+                </th>
+                <th>
+                    Tỉnh
+                </th>
+                <th>
+                    Ngày đăng
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var job in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => job.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => job.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => job.Qualification)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => job.Experience)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => job.Specialization)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => job.LastDatetoApply)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => job.Salary)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => job.TypeofJob.TypeName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => job.Company.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => job.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => job.Address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => job.Location)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => job.Country)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => job.Createdate)
+                    </td>
+                    <td>
+                        <span class="highlight">@Html.ActionLink("Sửa", "Edit", new { id = job.JobID })</span> |
+                        <span class="highlight">@Html.ActionLink("Xóa", "Delete", new { id = job.JobID })</span>
+                    </td>
+                </tr>
+            }
+        </table>
+        <style>
+            .table {
+                border: 1px solid #ccc;
+                border-collapse: collapse;
+                font-size: 14px;
+                line-height: 1.5em;
+                background-color: #fff;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+                .table th, .table td {
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                }
+
+            .highlight {
+                background-color: yellow;
+            }
+        </style>
+    </div>
+</section>
+
+

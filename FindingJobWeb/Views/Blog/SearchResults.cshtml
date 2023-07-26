@@ -1,0 +1,154 @@
+﻿@using FindingJobWeb.Models
+@using PagedList
+@using PagedList.Mvc
+
+@model IPagedList<FindingJobWeb.Models.BlogModel>
+@{
+    ViewBag.Title = "SearchResults";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- start banner Area -->
+@Html.Action("BannerArea", "Blog", new { title = "Kết quả tìm kiếm cho: " + ViewBag.Search })
+<!-- End banner Area -->
+<!-- Start blog-posts Area -->
+<section class="blog-posts-area section-gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 post-list blog-post-list">
+                @foreach (var post in Model)
+                {
+                    <div class="single-post">
+                        <img class="img-fluid" src="~/Resource/blog/@post.sImage" alt="">
+                        <ul class="tags">
+                            <li><a href="#">@string.Join(", ", post.sCategoryName)</a></li>
+                        </ul>
+                        <a href="@Url.Action("BlogDetails", "Blog" , new { id = post.iId })">
+                            <h1>
+                                @post.sTitle
+                            </h1>
+                        </a>
+                        <p>
+                            <pre>@(post.sContent.Substring(0, Math.Min(100, post.sContent.Length)))</pre>
+                        </p>
+
+                        <style>
+                            pre {
+                                font-family: "Poppins", sans-serif;
+                                font-size: 14px;
+                                white-space: pre-wrap;
+                            }
+                        </style>
+                        <div class="bottom-meta">
+                            <div class="user-details row align-items-center">
+                                <div class="comment-wrap col-lg-6">
+                                    <ul>
+                                        <li><a href="#"><span class="lnr lnr-heart"></span>	@post.iLike likes</a></li>
+                                        <li><a href="#"><span class="lnr lnr-bubble"></span> @post.iComment Comments</a></li>
+                                    </ul>
+                                </div>
+                                <div class="social-wrap col-lg-6">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 }
+            </div>
+            <div class="col-lg-4 sidebar">
+                <div class="single-widget search-widget">
+                    @using (Html.BeginForm("SearchResults", "Blog", FormMethod.Get.ToString()))
+                    {
+                        <div>
+                            <label for="search">Tìm kiếm bài viết:</label>
+                            @Html.TextBox("search")
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    }
+                </div>
+
+                @Html.Action("Protfolio", "Blog")
+
+                @Html.Action("SearchbyCategory", "Blog")
+
+                <div class="single-widget recent-posts-widget">
+                    <h4 class="title">Recent Posts</h4>
+                    <div class="blog-list ">
+                        <div class="single-recent-post d-flex flex-row">
+                            <div class="recent-thumb">
+                                <img class="img-fluid" src="img/blog/r1.jpg" alt="">
+                            </div>
+                            <div class="recent-details">
+                                <a href="blog-single.html">
+                                    <h4>
+                                        Home Audio Recording
+                                        For Everyone
+                                    </h4>
+                                </a>
+                                <p>
+                                    02 hours ago
+                                </p>
+                            </div>
+                        </div>
+                        <div class="single-recent-post d-flex flex-row">
+                            <div class="recent-thumb">
+                                <img class="img-fluid" src="img/blog/r2.jpg" alt="">
+                            </div>
+                            <div class="recent-details">
+                                <a href="blog-single.html">
+                                    <h4>
+                                        Home Audio Recording
+                                        For Everyone
+                                    </h4>
+                                </a>
+                                <p>
+                                    02 hours ago
+                                </p>
+                            </div>
+                        </div>
+                        <div class="single-recent-post d-flex flex-row">
+                            <div class="recent-thumb">
+                                <img class="img-fluid" src="img/blog/r3.jpg" alt="">
+                            </div>
+                            <div class="recent-details">
+                                <a href="blog-single.html">
+                                    <h4>
+                                        Home Audio Recording
+                                        For Everyone
+                                    </h4>
+                                </a>
+                                <p>
+                                    02 hours ago
+                                </p>
+                            </div>
+                        </div>
+                        <div class="single-recent-post d-flex flex-row">
+                            <div class="recent-thumb">
+                                <img class="img-fluid" src="img/blog/r4.jpg" alt="">
+                            </div>
+                            <div class="recent-details">
+                                <a href="blog-single.html">
+                                    <h4>
+                                        Home Audio Recording
+                                        For Everyone
+                                    </h4>
+                                </a>
+                                <p>
+                                    02 hours ago
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End blog-posts Area -->

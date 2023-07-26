@@ -1,0 +1,216 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- start banner Area -->
+<section class="banner-area relative" id="home">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+        <div class="row fullscreen d-flex align-items-center justify-content-center">
+            <div class="banner-content col-lg-12">
+                <h1 class="text-white">
+                    <span>1500+</span> Việc làm được đăng tuần trước
+
+                </h1>
+                <form action="search.html" class="serach-form-area">
+                    <div class="row justify-content-center form-wrap">
+                        <div class="col-lg-4 form-cols">
+                            <input type="text" class="form-control" name="search" placeholder="bạn đang tìm gì?">
+                        </div>
+                        <div class="col-lg-3 form-cols">
+                            <div class="default-select" id="default-selects" ">
+                                <select>
+                                    <option value="1">Chọn khu vực</option>
+                                    <option value="2">kv1</option>
+                                    <option value="3">kv2</option>
+                                    <option value="4">kv3</option>
+                                    <option value="5">kv4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 form-cols">
+                            <div class="default-select" id="default-selects2">
+                                <select>
+                                    <option value="1">All Category</option>
+                                    <option value="2">Medical</option>
+                                    <option value="3">Technology</option>
+                                    <option value="4">Goverment</option>
+                                    <option value="5">Development</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 form-cols">
+                            <button type="button" class="btn btn-info">
+                                <span class="lnr lnr-magnifier"></span> Tìm
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <p class="text-white"> <span>Tìm theo thẻ:</span> Tecnology, Business, Consulting, IT Company, Design, Development</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End banner Area -->
+<!-- Start features Area -->
+    @Html.Action("FeaturesPartial", "Home")
+<!-- End features Area -->
+<!-- Start popular-post Area -->    
+    @Html.Action("NewJobs", "Home")
+<!-- End popular-post Area -->
+<!-- Start feature-cat Area -->
+<section class="feature-cat-area pt-100" id="category">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-60 col-lg-10">
+                <div class="title text-center">
+                    <h1 class="mb-10">Các ngành nổi bật</h1>
+                    <p>Who are in extremely love with eco friendly system.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End feature-cat Area -->
+<!-- Start post Area -->
+<section class="post-area section-gap">
+    <div class="container">
+        <div class="row justify-content-center d-flex">
+            <div class="col-lg-8 post-list">
+                <ul class="cat-list">
+                    <li><a href="#">Gần đây</a></li>
+                    <li><a href="#">Toàn thời gian</a></li>
+                    <li><a href="#">Thực tập</a></li>
+                    <li><a href="#">Bán thời gian</a></li>
+                </ul>
+                <div class="single-post d-flex flex-row">
+                    <div class="thumb">
+                        <img src="img/post.png" alt="">
+                        <ul class="tags">
+                            <li>
+                                <a href="#">Art</a>
+                            </li>
+                            <li>
+                                <a href="#">Media</a>
+                            </li>
+                            <li>
+                                <a href="#">Design</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="details">
+                        <div class="title d-flex flex-row justify-content-between">
+                            <div class="titles">
+                                <a href="single.html"><h4>Creative Art Designer</h4></a>
+                                <h6>Premium Labels Limited</h6>
+                            </div>
+                            <ul class="btns">
+                                <li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+                                <li><a href="#">Ứng tuyển</a></li>
+                            </ul>
+                        </div>
+                        <p>
+                            Mô tả công việc
+                        </p>
+                        <h5>Tính chất công việc: Toàn thời gian</h5>
+                        <p class="address"><span class="lnr lnr-map"></span> 48, Bùi Thị Xuân</p>
+                        <p class="address"><span class="lnr lnr-database"></span> 15k - 25k</p>
+                    </div>
+                </div>
+
+
+
+                <a class="text-uppercase loadmore-btn mx-auto d-block" href="category.html">Hiển thị thêm bài viết</a>
+
+            </div>
+            <div class="col-lg-4 sidebar">
+                @Html.Action("SearchbyLocation", "Job")
+
+                @Html.Action("NewJob", "Job")
+
+                @Html.Action("SearchbyCategory", "Job")
+
+                <div class="single-slidebar">
+                    <h4>Carrer Advice Blog</h4>
+                    <div class="blog-list">
+                        <div class="single-blog " style="background:#000 url(img/blog1.jpg);">
+                            <a href="single.html">
+                                <h4>
+                                    Home Audio Recording <br>
+                                    For Everyone
+                                </h4>
+                            </a>
+                            <div class="meta justify-content-between d-flex">
+                                <p>
+                                    02 Hours ago
+                                </p>
+                                <p>
+                                    <span class="lnr lnr-heart"></span>
+                                    06
+                                    <span class="lnr lnr-bubble"></span>
+                                    02
+                                </p>
+                            </div>
+                        </div>
+                        <div class="single-blog " style="background:#000 url(img/blog2.jpg);">
+                            <a href="single.html">
+                                <h4>
+                                    Home Audio Recording <br>
+                                    For Everyone
+                                </h4>
+                            </a>
+                            <div class="meta justify-content-between d-flex">
+                                <p>
+                                    02 Hours ago
+                                </p>
+                                <p>
+                                    <span class="lnr lnr-heart"></span>
+                                    06
+                                    <span class="lnr lnr-bubble"></span>
+                                    02
+                                </p>
+                            </div>
+                        </div>
+                        <div class="single-blog " style="background:#000 url(img/blog1.jpg);">
+                            <a href="single.html">
+                                <h4>
+                                    Home Audio Recording <br>
+                                    For Everyone
+                                </h4>
+                            </a>
+                            <div class="meta justify-content-between d-flex">
+                                <p>
+                                    02 Hours ago
+                                </p>
+                                <p>
+                                    <span class="lnr lnr-heart"></span>
+                                    06
+                                    <span class="lnr lnr-bubble"></span>
+                                    02
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End post Area -->
+<!-- Start callto-action Area -->
+<section class="callto-action-area section-gap" id="join">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content col-lg-9">
+                <div class="title text-center">
+                    <h1 class="mb-10 text-white">Tham gia với chúng tôi hôm nay</h1>
+                    <p class="text-white">Khẩu hiệu....</p>
+                    <a class="primary-btn" href="#">Tôi là một ứng cử viên</a>
+                    <a class="primary-btn" href="#">Yêu cầu Free Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

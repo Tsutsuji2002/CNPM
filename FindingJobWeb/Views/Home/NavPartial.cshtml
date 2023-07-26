@@ -1,0 +1,27 @@
+﻿@model IEnumerable<FindingJobWeb.Models.Navigation>
+
+<div class="container">
+    <div class="row align-items-center justify-content-between d-flex">
+        <div id="logo">
+            <a href="@Url.Action("Index","Home")"><img src="~/Resource/img/logo.png" alt="" title="" /></a>
+        </div>
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                @foreach (var nav in Model)
+                {
+                    <li><a href="@Url.Action("Index",nav.Link)">@nav.Name</a></li>
+                }
+                <li class="menu-has-children">
+                    <a href="">Trang</a>
+                    <ul>
+                        <li><a href="elements.html">Theo yếu tố</a></li>
+                        <li><a href="search.html">Tìm kiếm</a></li>
+                        <li><a href="single.html">Đơn</a></li>
+                    </ul>
+                </li>
+                @Html.Action("LoginLogoutPartial","Home")
+            </ul>
+        </nav><!-- #nav-menu-container -->
+    </div>
+</div>
+
